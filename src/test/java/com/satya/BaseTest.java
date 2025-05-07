@@ -12,8 +12,9 @@ public class BaseTest {
     protected void getDriver() {
         FirefoxOptions options = new FirefoxOptions();
         options.addArguments("--headless");
-        WebDriverManager.firefoxdriver().setup();
-        driver = new FirefoxDriver(options);
+        WebDriverManager.chromedriver().setup();
+        driver = new FirefoxDriver();
+        driver.manage().window().fullscreen();
     }
 
 
