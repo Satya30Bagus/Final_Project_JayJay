@@ -24,6 +24,7 @@ public class login_page {
 
     public static void goToLoginpage() {
         driver.get("https://www.demoblaze.com/");
+        driver.manage().window().fullscreen();
     }
 
     public void inputUsername(String username) {
@@ -39,7 +40,7 @@ public class login_page {
     }
 
     public void clickloginButtononNavigation(){
-        driver.findElement(loginButtononNavigation);
+        driver.findElement(loginButtononNavigation).click();
     }
 
     public void validateErrorAppear(String errorMessage) {
