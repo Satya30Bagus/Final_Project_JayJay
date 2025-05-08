@@ -18,11 +18,8 @@ public class login_page {
         this.driver = driver;
     }
 
-//    public static void goToLoginPage() {
-//        driver.get("https://www.demoblaze.com/");
-//    }
 
-    public static void goToLoginpage() {
+    public static void goToLandingPage() {
         driver.get("https://www.demoblaze.com/");
     }
 
@@ -39,7 +36,7 @@ public class login_page {
     }
 
     public void clickloginButtononNavigation(){
-        driver.findElement(loginButtononNavigation);
+        driver.findElement(loginButtononNavigation).click();
     }
 
     public void validateErrorAppear(String errorMessage) {

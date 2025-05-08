@@ -47,7 +47,7 @@ tasks.register('apiTest') {
                     '--plugin', 'pretty',
                     '--glue', 'stepDef',
                     '--tags', "@api",
-                    'src/test/java/feature']
+                    'src/test/resources/features']
         }
     }
 }

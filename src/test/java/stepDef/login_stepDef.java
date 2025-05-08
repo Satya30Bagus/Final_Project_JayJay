@@ -15,7 +15,8 @@ public class login_stepDef extends BaseTest {
     @Given("User is on landing page")
     public void userIsOnLandingPage() {
         loginpage = new login_page(driver);
-        loginpage.goToLoginpage();
+        loginpage.goToLandingPage();
+
     }
 
     @When("User click login button in navigation")
@@ -38,16 +39,10 @@ public class login_stepDef extends BaseTest {
         loginpage.clickLoginButton();
     }
 
-    @Then("User is on homepage")
-    public void userIsOnHomepage() {
-    }
-
-    @And("User stay on landing page")
-    public void userStayOnLandingPage() {
-    }
 
     @Then("User able to see error message {string}")
-    public void userAbleToSeeErrorMessage(String errorMessage) {loginpage.validateErrorAppear(errorMessage);
+    public void userAbleToSeeErrorMessage(String errorMessage) {
+        loginpage.validateErrorAppear(errorMessage);
     }
 
     @Then("User able to see message on navigation {string}")
